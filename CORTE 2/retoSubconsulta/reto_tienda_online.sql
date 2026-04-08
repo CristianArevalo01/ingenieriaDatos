@@ -218,12 +218,12 @@ idDepartamento int primary key auto_increment,
 nombreDepartamento varchar(50) not null
 );
 
-insert into empleados (nombreEmpleado, departamentoEmpleado, salarioEmpleado) 
-values ('Darwin Perez','Recursos Humanos', 1300000),
-('Santiago Soledad','Contabilidad', 1400000),
-('Duban Lopez','Marketing', 1500000),
-('Sara Ferro','Recursos Humanos', 1600000),
-('Santiago Gomez','Marketing', 1300000);
+insert into empleados (nombreEmpleado, departamentoEmpleado, salarioEmpleado, idDepartamentoFK) 
+values ('Darwin Perez','Recursos Humanos', 1300000,1),
+('Santiago Soledad','Contabilidad', 1400000,2),
+('Duban Lopez','Marketing', 1500000,3),
+('Sara Ferro','Recursos Humanos', 1600000,1),
+('Santiago Gomez','Marketing', 1300000,3);
 
 insert into producto (nombreProducto, precioProducto, categoriaProducto) 
 values ('Zapatos',200000, 'Calzado'),
@@ -262,13 +262,17 @@ where prom_salario > 450000;
 
 ###Reto
 select * from empleados;
-select nombreEmpleado, salarioEmpleado as salario,
+select nombreEmpleado, salarioEmpleado  as salario,
 	(select AVG(salarioEmpleado) from empleados) as promGeneral,
 	salarioEmpleado - (select AVG(salarioEmpleado) from empleados) as diferencia from empleados;
 
+###Tarea
+describe producto;
+select * from producto;
 
-
-
-
-
+select categoriaProducto, nombreProducto, precioProducto,
+    (select max(precioProducto) from producto ) as precioMaximoCategoria
+from producto
+where precioProducto > (select AVG(precioProducto) from producto)
+order by precioProducto DESC;
 
