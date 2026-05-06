@@ -1,0 +1,372 @@
+/Proyecto Legislativo. Hecho por: Cristian Arevalo. Colecciones: usuarios, proyectos, ordenes_del_dia, auditoria_proyecto/
+
+//Crear DB
+use proyectoLegislativo
+
+//verificar que DB este creada
+db
+
+//crear coleccion usuario
+db.createCollection("usuario")
+
+//Mostrar las bases de datos
+show dbs
+
+//Mostrar las colecciones
+show collections
+
+//insertar usuarios
+db.usuario.insertMany([
+  {
+    idUsuario:      1,
+    nombreUsuario:  "CAMILO QUINTERO",
+    correoUsuario:  "camilo.quintero@mail.com",
+    celularUsuario: "3001025694",
+    contrasena:     "camiloquintero2025",
+    estado:         "activo",
+    rol:            "legislativo"
+  },
+  {
+    idUsuario:      2,
+    nombreUsuario:  "DANIEL URREA",
+    correoUsuario:  "daniel.urrea@mail.com",
+    celularUsuario: "3105446897",
+    contrasena:     "danielurrea2025",
+    estado:         "activo",
+    rol:            "legislativo"
+  },
+  {
+    idUsuario:      3,
+    nombreUsuario:  "JUAN PABLO CARDONA",
+    correoUsuario:  "juanpablo.cardona@mail.com",
+    celularUsuario: "3145221032",
+    contrasena:     "juanpablocardona2025",
+    estado:         "activo",
+    rol:            "legislativo"
+  },
+  {
+    idUsuario:      4,
+    nombreUsuario:  "JUANITA",
+    correoUsuario:  "juanita@mail.com",
+    celularUsuario: "3109556478",
+    contrasena:     "juanita2025",
+    estado:         "activo",
+    rol:            "legislativo"
+  },
+  {
+    idUsuario:      5,
+    nombreUsuario:  "MATEO GRISALES",
+    correoUsuario:  "mateo.grisales@mail.com",
+    celularUsuario: "3156249932",
+    contrasena:     "mateogrisales2025",
+    estado:         "activo",
+    rol:            "general"
+  },
+  {
+    idUsuario:      6,
+    nombreUsuario:  "VALENTINA RODRIGUEZ",
+    correoUsuario:  "valentina.rodriguez@mail.com",
+    celularUsuario: "3215493828",
+    contrasena:     "valentinarodriguez2025",
+    estado:         "activo",
+    rol:            "general"
+  },
+  {
+    idUsuario:      7,
+    nombreUsuario:  "VALENTINA SOSSA",
+    correoUsuario:  "valentina.sossa@mail.com",
+    celularUsuario: "3021025624",
+    contrasena:     "valentinasossa2025",
+    estado:         "activo",
+    rol:            "general"
+  }
+])
+
+//consultar todos los documentos insertados
+db.usuario.find().pretty()
+
+//crear coleccion proyecto
+db.createCollection("proyecto")
+
+//Mostrar las colecciones
+show collections
+
+//insercion primeros 10 proyectos
+db.proyecto.insertMany([
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "CAMILO QUINTERO",
+    otraPersona:        null,
+    fechaDebate:        new Date("2024-11-18"),
+    numero:             "09 DE 2023",
+    nombreProyecto:     "MEDIANTE LA CUAL SE MODIFICA LA LEY 1523 DE 2012, RECONOCIENDO E INCLUYENDO A LOS ANIMALES DENTRO DE LA POLITICA DE GESTIÓN DE RIESGOS DE DESASTRE Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "H.S.Yuly Esmeralda Hernandez Silva, H.S.Pedro Hernando Florez Porras, H.S.Clara Eugenia Lopez Obregon",
+    ponentes:           "H.R. Cristobal Caicedo Angulo",
+    micrositio:         "https://www.camara.gov.co/politica-riesgo-desastres-animales",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "La presente ley modifica la ley 1523 de 2012 con el propósito de incluir a los animales como sujetos destinatarios de las medidas de atención y prevención en el marco de esta política.",
+    numArticulo:        "15",
+    sintesisArticulo:   "Del 1 al 15: Modificaciones a la Ley 1523 de 2012 e inclusión de animales en gestión del riesgo",
+    conceptos:          "MinHacienda: las obligaciones referidas podrían no tener impacto en las finanzas de la Nación si se ejecutan con personal ya vinculado.",
+    consideraciones:    "Colombia puede experimentar sismos, inundaciones y otros eventos. La ley actual no incluye animales en los protocolos de riesgo.",
+    votacionArticulo:   "Positivo a todos",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       1
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "DANIEL URREA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2024-12-03"),
+    numero:             "295 DE 2024",
+    nombreProyecto:     "MEDIANTE EL CUAL SE REGLAMENTA EL BALUARTE DISTRITAL DE TEATRISTAS INDEPENDIENTES DE CARTAGENA DE SAN LUCAS, SU SALA DE TEATRO Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "H.R.Dorina Hernandez Palomino",
+    ponentes:           "H.R. Dorina Hernandez Palomino, H.R. Susana Gomez Castano",
+    micrositio:         "https://www.camara.gov.co/teatristas-independientes",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Reglamentar el Baluarte Distrital de Teatristas como patrimonio inmueble de Cartagena.",
+    numArticulo:        "11",
+    sintesisArticulo:   "1. Objeto 2. Definiciones 3. Administración 4. Adecuaciones 5. Recursos Mincultura 6. Destinación recaudo 7-8. Recursos territorial 9. Asociación 10. Monitoreo 11. Vigencia",
+    conceptos:          "No se encontraron conceptos",
+    consideraciones:    "Art. 6 es cuestionable que se apropie un porcentaje del recaudo de las fortificaciones de Cartagena.",
+    votacionArticulo:   "1-Neg 2-Neg 3-Neg 4-Pos 5-Pos 6-Neg 7-Pos 8-Pos 9-Neg 10-Pos 11-Neg",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       2
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "DANIEL URREA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2024-11-27"),
+    numero:             "100 DE 2024",
+    nombreProyecto:     "POR MEDIO DE LA CUAL SE CREA EL FESTIVAL DE ARTES, CULTURA, MUSICA Y TRADICIONES CAMPESINAS DEL MUNDO EN EL DEPARTAMENTO DE BOYACA",
+    autores:            "H.R.Wilmer Yair Castellanos Hernandez",
+    ponentes:           "H.R. Jaime Raul Salamanca Torres, H.R. Eduard Alexis Triana Rincon",
+    micrositio:         "https://www.camara.gov.co/festival-de-artes-de-boyaca",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Exaltar a la figura campesina y su contribución a la seguridad alimentaria fomentando la preservación y difusión de las artes y tradiciones campesinas.",
+    numArticulo:        "8",
+    sintesisArticulo:   "1. Objeto 2. Creación del festival 3. Celebración 4. Organización 5. Invitación internacional 6. Banco de proyectos 7. Disponibilidad presupuestal 8. Vigencia",
+    conceptos:          "No hay conceptos",
+    consideraciones:    null,
+    votacionArticulo:   "Positivo a todos",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       2
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "JUAN PABLO CARDONA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2025-02-25"),
+    numero:             "066 DE 2024",
+    nombreProyecto:     "POR EL CUAL SE MODIFICA LA LEY 769 DE 2002 SOBRE EL SEGURO OBLIGATORIO DE ACCIDENTES DE TRANSITO (SOAT) EN LAS ZONAS FRONTERIZAS Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "Ruth Amelia Caycedo Rosero",
+    ponentes:           "H.R. Alfredo Ape Cuello Baute",
+    micrositio:         "https://www.camara.gov.co/gratuidad-soat",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Establecer un término de gratuidad en el SOAT de los vehículos extranjeros que ingresan al territorio nacional por zonas fronterizas.",
+    numArticulo:        "3",
+    sintesisArticulo:   "1. Modificación al artículo 42 de la Ley 769 2. Obligación de aseguradoras 3. Vigencia",
+    conceptos:          "Sin conceptos",
+    consideraciones:    "La obligación de que las aseguradoras expidan seguros para vehículos extranjeros parece excesiva si no es rentable económicamente.",
+    votacionArticulo:   "Positivos",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       3
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "MATEO GRISALES",
+    otraPersona:        null,
+    fechaDebate:        new Date("2025-02-18"),
+    numero:             "064 DE 2024",
+    nombreProyecto:     "POR MEDIO DE LA CUAL SE OTORGA BONIFICACION AL PERSONAL ADMINISTRATIVO DE INSTITUCIONES EDUCATIVAS PUBLICAS UBICADAS EN ZONAS DE DIFICIL ACCESO",
+    autores:            "Hector Mauricio Cuellar Pinzon",
+    ponentes:           "CIRO ANTONIO RODRIGUEZ PINZON",
+    micrositio:         null,
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Ampliar la bonificación especial al personal administrativo de instituciones educativas en zonas de difícil acceso.",
+    numArticulo:        "3",
+    sintesisArticulo:   "1. Adición parágrafo art. 2 ley 1297 de 2009 2. Reglamentación 3. Vigencia y derogatoria",
+    conceptos:          "Sin conceptos",
+    consideraciones:    "Sin alertas. Apoyar decididamente. El 22.7% de sedes educativas rurales tienen conectividad a internet.",
+    votacionArticulo:   "Positivos",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       5
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "JUAN PABLO CARDONA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2025-04-02"),
+    numero:             "456 DE 2024",
+    nombreProyecto:     "POR MEDIO DE LA CUAL SE RECONOCE, EXALTA Y DECLARA PATRIMONIO CULTURAL INMATERIAL DE LA NACION EL FESTIVAL NACIONAL DEL CAIMAN CIENAGUERO DEL MUNICIPIO DE CIENAGA EN EL DEPARTAMENTO DEL MAGDALENA Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            null,
+    ponentes:           null,
+    micrositio:         null,
+    accionSugerida:     "NO ACTUAR",
+    objeto:             null,
+    numArticulo:        null,
+    sintesisArticulo:   null,
+    conceptos:          null,
+    consideraciones:    null,
+    votacionArticulo:   null,
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       3
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "CAMILO QUINTERO",
+    otraPersona:        null,
+    fechaDebate:        new Date("2025-02-26"),
+    numero:             "219 DE 2024",
+    nombreProyecto:     "POR MEDIO DE LA CUAL SE REGULA LA CIRCULACION Y SE PROMUEVE EL USO DE VEHICULOS ELECTRICOS LIVIANOS DE MOVILIDAD PERSONAL URBANA COMO ALTERNATIVAS DE MOVILIDAD SOSTENIBLE",
+    autores:            "Senador Julio Alberto Elias Vidal",
+    ponentes:           "Diego Fernando Caicedo",
+    micrositio:         "https://www.camara.gov.co/bicicletas-y-patinetas",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Regular el tránsito de bicicletas con pedaleo asistido, patinetas eléctricas y vehículos autoequilibrados, y promover su uso como alternativas de movilidad urbana sostenible.",
+    numArticulo:        "11",
+    sintesisArticulo:   "1. Objeto 2. Definiciones 3. Circulación 4. Prelación en vía 5. Adelantamiento 6. Reglamentación 7. Repuestos 8. Incentivos funcionarios 9. Promoción 10. Aranceles 11. Vigencia",
+    conceptos:          "MinHacienda: el alcance fiscal no está especificado.",
+    consideraciones:    "Edad mínima 16 años, límite 20 km/h en ciclo-infraestructura, casco obligatorio, prendas reflectivas de 6pm a 6am.",
+    votacionArticulo:   "Positivo todos",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       1
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "MATEO GRISALES",
+    otraPersona:        null,
+    fechaDebate:        new Date("2025-03-11"),
+    numero:             "189 DE 2024",
+    nombreProyecto:     "POR MEDIO DE LA CUAL SE MODIFICA LA LEY 43 DE 1990 Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "H.R.Jorge Alberto Cerchiaro Figueroa, H.R.Luis David Suarez Chadid, H.R.Gerardo Yepes Caro",
+    ponentes:           "H.R. Alfredo Ape Cuello Baute, H.R. Dorina Hernandez Palomino",
+    micrositio:         "https://www.camara.gov.co/tarjeta-contador-publico",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Promover la inclusión y equidad en el acceso a la tarjeta profesional de los graduados de contaduría, modificando los requisitos de expedición de la tarjeta profesional como Contador Público.",
+    numArticulo:        "2",
+    sintesisArticulo:   "1. Modificación requisitos tarjeta profesional contador 2. Vigencia",
+    conceptos:          "Sin concepto",
+    consideraciones:    "Proyecto sencillo que busca actualizar la norma de acreditación profesional de contadores. Sin alertas importantes.",
+    votacionArticulo:   null,
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       5
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "VALENTINA SOSSA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2024-10-30"),
+    numero:             "054 DE 2024",
+    nombreProyecto:     "POR MEDIO DEL CUAL SE PROMOCIONA EL TURISMO COMUNITARIO EN PAZ Y SOSTENIBLE Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "H.R.James Hermenegildo Mosquera Torres",
+    ponentes:           "H.R. Haiver Rincon Gutierrez, H.R. Gerson Lisimaco Montano Arizala",
+    micrositio:         "https://www.camara.gov.co/turismo-comunitario-2",
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Crear un marco legal para promover, regular y fomentar el programa de turismo comunitario en paz y sostenible, garantizando la participación de comunidades locales.",
+    numArticulo:        "13",
+    sintesisArticulo:   "1. Objeto 2. Principios 3. Creación Programa Nacional 4. Desarrollo 5. Registro OBC 6. Incentivos 7. Capacitación 8. Protección 9. Diversidad 10. Financiación 11. Informe 12. Reglamentación 13. Vigencia",
+    conceptos:          "No hay conceptos. Tiene impacto fiscal, requiere concepto de Ministerio de Hacienda.",
+    consideraciones:    "Iniciativa positiva. Sin embargo, no se realizó análisis de costos. El Registro de OBC podría requerir consulta previa para comunidades indígenas.",
+    votacionArticulo:   "Positivo",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       7
+  },
+  {
+    estadoProyecto:     "Aprobado C",
+    personaAsignada:    "VALENTINA SOSSA",
+    otraPersona:        null,
+    fechaDebate:        new Date("2024-11-27"),
+    numero:             "260 DE 2024",
+    nombreProyecto:     "POR MEDIO DEL CUAL SE DECLARA PATRIMONIO CULTURAL INMATERIAL DE LA NACION EL SANJUANERO TOLIMENSE Y SE DICTAN OTRAS DISPOSICIONES",
+    autores:            "H.R.Jose Alejandro Martinez Sanchez, H.R.Jorge Eliecer Tamayo Marulanda, H.R.Alvaro Mauricio Londono Lugo",
+    ponentes:           null,
+    micrositio:         null,
+    accionSugerida:     "NO ACTUAR",
+    objeto:             "Declarar como patrimonio cultural inmaterial de la Nación el baile del Sanjuanero Tolimense para reconocerlo como danza tradicional y género musical del Tolima Grande.",
+    numArticulo:        "7",
+    sintesisArticulo:   "1. Objeto 2. Inclusión en lista representativa 3-4. Disponibilidad presupuestal 5. Divulgación 6. Día Nacional del Sanjuanero 7. Vigencia",
+    conceptos:          "No hay conceptos",
+    consideraciones:    "Sin alertas. Este proyecto desconoce el procedimiento administrativo del Ministerio de Culturas para estas declaratorias.",
+    votacionArticulo:   "Positivo",
+    conflictoDeInteres: "NO APLICA",
+    estadoCi:           "NO APLICA",
+    estadoProposicion:  "NO APLICA",
+    linkProposicion:    "NO APLICA",
+    idUsuarioRef:       7
+  }
+])
+
+// Consultar todos los documentos insertados
+db.proyecto.find().pretty()
+
+//requisitos funcionales
+
+//RQF002-03: Consultar usuarios
+// Consulta completa de todos los usuarios
+db.usuario.find().pretty()
+ 
+// Filtrar solo usuarios activos
+db.usuario.find({ estado: "activo" })
+ 
+// Filtrar usuarios por rol legislativo
+db.usuario.find({ rol: "legislativo" })
+ 
+// Uso de $and: usuarios activos con rol general
+db.usuario.find({ $and: [{ estado: "activo" }, { rol: "general" }] })
+
+// Consulta de un usuario específico por correo
+db.usuario.findOne({ correoUsuario: "camilo.quintero@mail.com" })
+
+// RQF002-05: Consulta de proyectos asignados por usuario
+// Proyectos asignados a MATEO GRISALES (idUsuario: 5 — rol general)
+db.proyecto.find({ idUsuarioRef: 5 }, { numero: 1, nombreProyecto: 1, estadoProyecto: 1, fechaDebate: 1 }).pretty()
+
+
+// RQF003-01: Consultar proyectos
+// Listado completo de proyectos (numero, título, estado, fecha)
+db.proyecto.find({}, { numero: 1, nombreProyecto: 1, estadoProyecto: 1, fechaDebate: 1 }).pretty()
+
+// Buscar un proyecto específico por número
+db.proyecto.findOne({ numero: "066 DE 2024" })
+
+// Proyectos asignados a cualquiera de los usuarios de rol general (idUsuario 5, 6 o 7)
+db.proyecto.find(
+  { idUsuarioRef: { $in: [5, 6, 7] } },
+  { numero: 1, nombreProyecto: 1, estadoProyecto: 1, personaAsignada: 1, fechaDebate: 1 }
+).pretty()
+
+
+
+
+
+
+
