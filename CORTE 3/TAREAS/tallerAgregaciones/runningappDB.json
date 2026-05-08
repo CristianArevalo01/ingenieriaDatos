@@ -1,0 +1,528 @@
+// crear base de datos runningapp
+use runningapp
+
+//crear colección corredores
+db.corredores.insertMany([
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Enero",
+    "minutos": 45,
+    "kilometros": 6.5,
+    "aficiones": [
+      "ciclismo",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Enero",
+    "minutos": 60,
+    "kilometros": 8,
+    "aficiones": [
+      "ciclismo",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Febrero",
+    "minutos": 50,
+    "kilometros": 7.2,
+    "aficiones": [
+      "ciclismo",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Febrero",
+    "minutos": 55,
+    "kilometros": 7.8,
+    "aficiones": [
+      "ciclismo",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Marzo",
+    "minutos": 40,
+    "kilometros": 5.5,
+    "aficiones": [
+      "ciclismo",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Enero",
+    "minutos": 30,
+    "kilometros": 4,
+    "aficiones": [
+      "yoga",
+      "ciclismo"
+    ]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Enero",
+    "minutos": 35,
+    "kilometros": 4.5,
+    "aficiones": [
+      "yoga",
+      "ciclismo"
+    ]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Febrero",
+    "minutos": 40,
+    "kilometros": 5,
+    "aficiones": [
+      "yoga",
+      "ciclismo"
+    ]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Marzo",
+    "minutos": 45,
+    "kilometros": 6,
+    "aficiones": [
+      "yoga",
+      "ciclismo"
+    ]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Marzo",
+    "minutos": 50,
+    "kilometros": 6.8,
+    "aficiones": [
+      "yoga",
+      "ciclismo"
+    ]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Enero",
+    "minutos": 70,
+    "kilometros": 10,
+    "aficiones": [
+      "natación",
+      "fútbol",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Enero",
+    "minutos": 65,
+    "kilometros": 9.5,
+    "aficiones": [
+      "natación",
+      "fútbol",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Febrero",
+    "minutos": 80,
+    "kilometros": 11,
+    "aficiones": [
+      "natación",
+      "fútbol",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Marzo",
+    "minutos": 75,
+    "kilometros": 10.5,
+    "aficiones": [
+      "natación",
+      "fútbol",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Marzo",
+    "minutos": 60,
+    "kilometros": 8.5,
+    "aficiones": [
+      "natación",
+      "fútbol",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Enero",
+    "minutos": 25,
+    "kilometros": 3,
+    "aficiones": [
+      "yoga",
+      "pilates"
+    ]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Febrero",
+    "minutos": 30,
+    "kilometros": 3.8,
+    "aficiones": [
+      "yoga",
+      "pilates"
+    ]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Febrero",
+    "minutos": 28,
+    "kilometros": 3.5,
+    "aficiones": [
+      "yoga",
+      "pilates"
+    ]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Marzo",
+    "minutos": 35,
+    "kilometros": 4.2,
+    "aficiones": [
+      "yoga",
+      "pilates"
+    ]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Marzo",
+    "minutos": 40,
+    "kilometros": 4.8,
+    "aficiones": [
+      "yoga",
+      "pilates"
+    ]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Enero",
+    "minutos": 90,
+    "kilometros": 13,
+    "aficiones": [
+      "ciclismo",
+      "fútbol",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Enero",
+    "minutos": 85,
+    "kilometros": 12.5,
+    "aficiones": [
+      "ciclismo",
+      "fútbol",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Febrero",
+    "minutos": 95,
+    "kilometros": 14,
+    "aficiones": [
+      "ciclismo",
+      "fútbol",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Febrero",
+    "minutos": 100,
+    "kilometros": 15,
+    "aficiones": [
+      "ciclismo",
+      "fútbol",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Marzo",
+    "minutos": 88,
+    "kilometros": 12,
+    "aficiones": [
+      "ciclismo",
+      "fútbol",
+      "natación",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Enero",
+    "minutos": 55,
+    "kilometros": 7,
+    "aficiones": [
+      "pilates",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Febrero",
+    "minutos": 60,
+    "kilometros": 8,
+    "aficiones": [
+      "pilates",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Febrero",
+    "minutos": 58,
+    "kilometros": 7.5,
+    "aficiones": [
+      "pilates",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Marzo",
+    "minutos": 65,
+    "kilometros": 9,
+    "aficiones": [
+      "pilates",
+      "senderismo"
+    ]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Marzo",
+    "minutos": 70,
+    "kilometros": 9.5,
+    "aficiones": [
+      "pilates",
+      "senderismo"
+    ]
+  }
+])
+db.corredores.find().pretty();
+
+/*1. Identificar total de minutos y total de kilómetros recorridos por cada usuario (investigue
+cómo concatenar nombre y apellido) de la aplicación running*/
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: { $concat: ["$nombre", " ", "$apellido"] },
+      total_minutos: { $sum: "$minutos" },
+      total_kilometros: { $sum: "$kilometros" }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+//2. Obtener el promedio de minutos mensuales realizados por cada corredor
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: {
+        corredor: { $concat: ["$nombre", " ", "$apellido"] },
+        mes: "$mes"
+      },
+      minutos_mes: { $sum: "$minutos" }
+    }
+  },
+  {
+    $group: {
+      _id: "$_id.corredor",
+      promedio_minutos_mensual: { $avg: "$minutos_mes" }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+/*3. Obtener el promedio de kilómetros mensuales de cada corredor, siempre y cuando ése
+promedio sea mayor a 5K*/
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: {
+        corredor: { $concat: ["$nombre", " ", "$apellido"] },
+        mes: "$mes"
+      },
+      kilometros_mes: { $sum: "$kilometros" }
+    }
+  },
+  {
+    $group: {
+      _id: "$_id.corredor",
+      promedio_kilometros_mensual: { $avg: "$kilometros_mes" }
+    }
+  },
+  {
+    $match: {
+      promedio_kilometros_mensual: { $gt: 5 }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+/*4. Obtener el total de kilómetros recorridos agrupados por corredor y por mes (investigar
+cómo se puede agrupar por dos campos), ordenar por mes*/
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: {
+        corredor: { $concat: ["$nombre", " ", "$apellido"] },
+        mes: "$mes"
+      },
+      total_kilometros: { $sum: "$kilometros" }
+    }
+  },
+  {
+    $sort: { "_id.mes": 1, "_id.corredor": 1 }
+  }
+])
+
+//5. Ver por cada corredor las distancias recorridas (investigar uso de operador $addToSet)
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: { $concat: ["$nombre", " ", "$apellido"] },
+      distancias_recorridas: { $addToSet: "$kilometros" }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+/*6. Determinar cuántos corredores están interesados en cada afición (investigar uso
+$unwind)*/
+db.corredores.aggregate([
+  {
+    $unwind: "$aficiones"
+  },
+  {
+    $group: {
+      _id: {
+        corredor: { $concat: ["$nombre", " ", "$apellido"] },
+        aficion: "$aficiones"
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$_id.aficion",
+      total_corredores: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { total_corredores: -1 }
+  }
+])
+
+//7.1 Corredor con mayor y menor distancia en una sola sesión
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: { $concat: ["$nombre", " ", "$apellido"] },
+      sesion_mas_larga: { $max: "$kilometros" },
+      sesion_mas_corta: { $min: "$kilometros" }
+    }
+  },
+  {
+    $sort: { sesion_mas_larga: -1 }
+  }
+])
+
+/*7.2 Por cada mes, obtener el total de kilómetros recorridos por todos los corredores, el promedio de minutos y la cantidad de sesiones registradas*/
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: "$mes",
+      total_kilometros: { $sum: "$kilometros" },
+      promedio_minutos: { $avg: "$minutos" },
+      total_sesiones: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      total_kilometros: 1,
+      promedio_minutos: { $round: ["$promedio_minutos", 1] },
+      total_sesiones: 1
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])
+
+//7.3 Lista de meses activos por corredor usando $push
+db.corredores.aggregate([
+  {
+    $group: {
+      _id: { $concat: ["$nombre", " ", "$apellido"] },
+      meses_activo: { $push: "$mes" },
+      total_sesiones: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { _id: 1 }
+  }
+])

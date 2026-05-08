@@ -1,0 +1,242 @@
+[
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Enero",
+    "minutos": 45,
+    "kilometros": 6.5,
+    "aficiones": ["ciclismo", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Enero",
+    "minutos": 60,
+    "kilometros": 8.0,
+    "aficiones": ["ciclismo", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Febrero",
+    "minutos": 50,
+    "kilometros": 7.2,
+    "aficiones": ["ciclismo", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Febrero",
+    "minutos": 55,
+    "kilometros": 7.8,
+    "aficiones": ["ciclismo", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "mes": "Marzo",
+    "minutos": 40,
+    "kilometros": 5.5,
+    "aficiones": ["ciclismo", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Enero",
+    "minutos": 30,
+    "kilometros": 4.0,
+    "aficiones": ["yoga", "ciclismo"]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Enero",
+    "minutos": 35,
+    "kilometros": 4.5,
+    "aficiones": ["yoga", "ciclismo"]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Febrero",
+    "minutos": 40,
+    "kilometros": 5.0,
+    "aficiones": ["yoga", "ciclismo"]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Marzo",
+    "minutos": 45,
+    "kilometros": 6.0,
+    "aficiones": ["yoga", "ciclismo"]
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Gómez",
+    "mes": "Marzo",
+    "minutos": 50,
+    "kilometros": 6.8,
+    "aficiones": ["yoga", "ciclismo"]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Enero",
+    "minutos": 70,
+    "kilometros": 10.0,
+    "aficiones": ["natación", "fútbol", "senderismo"]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Enero",
+    "minutos": 65,
+    "kilometros": 9.5,
+    "aficiones": ["natación", "fútbol", "senderismo"]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Febrero",
+    "minutos": 80,
+    "kilometros": 11.0,
+    "aficiones": ["natación", "fútbol", "senderismo"]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Marzo",
+    "minutos": 75,
+    "kilometros": 10.5,
+    "aficiones": ["natación", "fútbol", "senderismo"]
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Torres",
+    "mes": "Marzo",
+    "minutos": 60,
+    "kilometros": 8.5,
+    "aficiones": ["natación", "fútbol", "senderismo"]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Enero",
+    "minutos": 25,
+    "kilometros": 3.0,
+    "aficiones": ["yoga", "pilates"]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Febrero",
+    "minutos": 30,
+    "kilometros": 3.8,
+    "aficiones": ["yoga", "pilates"]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Febrero",
+    "minutos": 28,
+    "kilometros": 3.5,
+    "aficiones": ["yoga", "pilates"]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Marzo",
+    "minutos": 35,
+    "kilometros": 4.2,
+    "aficiones": ["yoga", "pilates"]
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "mes": "Marzo",
+    "minutos": 40,
+    "kilometros": 4.8,
+    "aficiones": ["yoga", "pilates"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Enero",
+    "minutos": 90,
+    "kilometros": 13.0,
+    "aficiones": ["ciclismo", "fútbol", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Enero",
+    "minutos": 85,
+    "kilometros": 12.5,
+    "aficiones": ["ciclismo", "fútbol", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Febrero",
+    "minutos": 95,
+    "kilometros": 14.0,
+    "aficiones": ["ciclismo", "fútbol", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Febrero",
+    "minutos": 100,
+    "kilometros": 15.0,
+    "aficiones": ["ciclismo", "fútbol", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Vargas",
+    "mes": "Marzo",
+    "minutos": 88,
+    "kilometros": 12.0,
+    "aficiones": ["ciclismo", "fútbol", "natación", "senderismo"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Enero",
+    "minutos": 55,
+    "kilometros": 7.0,
+    "aficiones": ["pilates", "senderismo"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Febrero",
+    "minutos": 60,
+    "kilometros": 8.0,
+    "aficiones": ["pilates", "senderismo"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Febrero",
+    "minutos": 58,
+    "kilometros": 7.5,
+    "aficiones": ["pilates", "senderismo"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Marzo",
+    "minutos": 65,
+    "kilometros": 9.0,
+    "aficiones": ["pilates", "senderismo"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Mendoza",
+    "mes": "Marzo",
+    "minutos": 70,
+    "kilometros": 9.5,
+    "aficiones": ["pilates", "senderismo"]
+  }
+]
